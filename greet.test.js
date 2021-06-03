@@ -1,17 +1,17 @@
 describe('Greet names with different languages', function () {
     it('should greet Lina in english', function () {
 
-        assert.equal(greet().greetpeople('Lina', 'English'), 'Hello,Lina');
+        assert.equal(greet().greetpeople('Lina', 'English'), 'Hello, Lina!');
 
 
     });
     it('should greet Buhle in IsiXhosa', function () {
-        assert.equal(greet().greetpeople('Buhle', 'Isixhosa'), 'Molo,Buhle');
+        assert.equal(greet().greetpeople('Buhle', 'Isixhosa'), 'Molo, Buhle!');
 
 
     });
     it('should greet Nzwakie in Sesotho', function () {
-        assert.equal(greet().greetpeople('Nzwakie', 'Sesotho'), 'Dumela,Nzwakie');
+        assert.equal(greet().greetpeople('Nzwakie', 'Sesotho'), 'Dumela, Nzwakie!');
 
 
     });
