@@ -5,16 +5,16 @@ function greet(nameContainer) {
 
         if (language == "English") {
 
-            return "Hello" + "," + name;
+            return "Hello" + ", " + name + "!";
         }
 
         if (language == "Isixhosa") {
 
-            return "Molo" + "," + name;
+            return "Molo" + ", " + name + "!";
         }
         else if (language == "Sesotho") {
 
-            return "Dumela" + "," + name;
+            return "Dumela" + ", " + name + "!";
         }
     }
     //create a function that store names

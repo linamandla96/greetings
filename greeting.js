@@ -74,8 +74,8 @@ function radioTypebtnClicked() {
 
     greetingCounterElem.innerHTML = greetFun.counterPeople();
 
-    checkLanguage = "";
-    nameEntered = "";
+
+    nameElem.value = "";
 
 
 }
