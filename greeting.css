@@ -1,0 +1,43 @@
+@media(min-width: 800px) {
+    .lazy {
+        display:flex;
+    }
+}
+
+.greeting {
+    background-color:teal;
+    width: 490px;
+    margin:auto;
+    padding: 50px;
+    border: 5px black solid;
+}
+h1 {
+    text-align: center;
+    border: solid 2px black;
+}
+
+.counters {
+    padding-left: 85%;;
+
+}
+.counter {
+    padding-left: 45px;
+}
+
+.errors {
+    color:red;
+}
+
+.english{
+    margin: 2%;
+    
+   
+   } 
+   .xhosa{
+       margin: 2%;
+       
+   }
+   .sotho{
+       margin: 2%;
+       
+    } 
