@@ -18,31 +18,51 @@ describe('Greet names with different languages', function () {
     describe('Store names that are greeted', function () {
         it('should be able to store lina when she/he greeted', function () {
 
-            assert.deepEqual(greet().greetpeople([{ names: "Jodie" }]));
+            let greetings = greet();
+            greetings.storeNames('Lina')
+            assert.equal(greetings.nameGreeted()['Lina'] );
 
 
         });
         it('should be able to store Buhle when she/he greeted', function () {
 
-            assert.deepEqual(greet().greetpeople([{ names: "Buhle" }]));
+            let greetings = greet();
+            greetings.storeNames("buhle")
+            
+            assert.equal(greetings.nameGreeted()['buhle']);
+
 
 
         });
         it('should be able to store Cinga  when she/he greeted', function () {
 
-            assert.deepEqual(greet().greetpeople([{ names: "Cinga" }]));
+            let greetings = greet();
+            greetings.storeNames("Nzwaki")
+            
+            assert.equal(greetings.nameGreeted()['Nzwaki']);
+
 
 
         });
-        it('should be able to store Nzwakie  when she/he greeted', function () {
+        it('should be able to store Nzwakie and Jodie  when she/he greeted', function () {
 
-            assert.deepEqual(greet().greetpeople([{ names: "Nzwakie" }]));
+            let greetings = greet();
+            greetings.storeNames("Nzwaki","Jodie")
+            
+            assert.equal(greetings.nameGreeted()['Nzwaki','Jodie']);
+
+
 
 
         });
         it('should be able to store all the names that are  greeted', function () {
 
-            assert.deepEqual(greet().greetpeople([{ names: "Nzwakie", names: "Jodie", names: "Buhle" }]));
+            let greetings = greet();
+            greetings.storeNames("Nzwaki","Jodie","Cinga","Buhle")
+            
+            assert.equal(greetings.nameGreeted()['Nzwaki','Jodie','Cinga','Buhle']);
+
+
 
         });
 
@@ -50,18 +70,34 @@ describe('Greet names with different languages', function () {
     describe('Counter names that are greeted', function () {
         it('should be able to count name that is greeted', function () {
 
-            assert.deepEqual(greet().storeNames([{names:"Jodie"},1]));
+            let greetings = greet();
+            greetings.storeNames("Nzwaki")
+            
+            assert.equal(greetings.counterPeople(['Nzwaki']),1);
+
             
 
         });
         it('should be able to count all the names that are  greeted', function () {
 
-            assert.deepEqual(greet().storeNames([{ names: "Nzwakie", names: "Jodie", names: "Buhle" }, 3]));
+            let greetings = greet();
+            greetings.storeNames("Nzwaki")
+            greetings.storeNames("Jodie")
+            greetings.storeNames("Buhle")
+            
+            assert.equal(greetings.counterPeople(['Nzwaki','Jodie','Buhle']),3);
 
         });
         it('should be able to greet the name that is repeated but it must not count it again', function () {
 
-            assert.deepEqual(greet().storeNames([{ names: "Nzwakie", names: "Jodie", names: "Buhle", names: "Buhle" }, 3]));
+            let greetings = greet();
+            greetings.storeNames("Nzwaki")
+            greetings.storeNames("Jodie")
+            greetings.storeNames("Buhle")
+            greetings.storeNames("Buhle")
+            
+            assert.equal(greetings.counterPeople(['Nzwaki','Jodie','Buhle']),3);
+
 
         });
     });

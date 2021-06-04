@@ -38,12 +38,13 @@ greetingCounterElem.innerHTML = greetFun.counterPeople();
 
 function radioTypebtnClicked() {
     var nameEntered = nameElem.value;
-
+    var upperCaseName = nameEntered.substring(0, 1).toUpperCase() + nameEntered.slice(1).toLowerCase()
+console.log(upperCaseName)
     var checkLanguage = document.querySelector("input[name = 'language']:checked")
     if (checkLanguage && nameEntered) {
 
         if (reg.test(nameEntered.toUpperCase())) {
-            greetFun.storeNames(nameEntered)
+            greetFun.storeNames(upperCaseName)
 
             localStorage.setItem("names", JSON.stringify(greetFun.nameGreeted()));
 

@@ -1,33 +1,35 @@
 function greet(nameContainer) {
     var nameList = nameContainer || [];
-    //create a function that greets names in different language
+    
     function greetpeople(name, language) {
+        var upperCaseName = name.substring(0,1).toUpperCase() + name.slice(1).toLowerCase()
 
         if (language == "English") {
 
-            return "Hello" + ", " + name + "!";
+            return "Hello" + ", " + upperCaseName + "!";
         }
 
         if (language == "Isixhosa") {
 
-            return "Molo" + ", " + name + "!";
+            return "Molo" + ", " + upperCaseName + "!";
         }
         else if (language == "Sesotho") {
 
-            return "Dumela" + ", " + name + "!";
+            return "Dumela" + ", " + upperCaseName + "!";
         }
     }
-    //create a function that store names
+    
     function storeNames(names) {
-        if (names) {
-            if (!nameList.includes(names)) {
-                nameList.push(names)
+       var upperCaseName = names.substring(0,1).toUpperCase() + names.slice(1).toLowerCase()
+        if (upperCaseName) {
+            if (!nameList.includes(upperCaseName)) {
+                nameList.push(upperCaseName)
             }
 
         }
         //  return nameList;
     }
-    //creat that return the length length of the list 
+    
     function counterPeople() {
         return nameList.length;
     }
