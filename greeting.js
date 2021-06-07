@@ -77,6 +77,8 @@ console.log(upperCaseName)
 
 
     nameElem.value = "";
+    checkLanguage.checked = false;
+
 
 
 }
